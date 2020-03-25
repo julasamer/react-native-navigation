@@ -2,6 +2,7 @@
 #import "RNNRootViewController.h"
 #import "RNNAnimationsTransitionDelegate.h"
 #import "RNNLayoutProtocol.h"
+#import "SKRNNHook.h"
 
 @implementation RNNModalManager {
 	NSMutableArray* _pendingModalIdsToDismiss;
@@ -51,7 +52,7 @@
 }
 
 -(void)dismissAllModalsAnimated:(BOOL)animated {
-	UIViewController *root = UIApplication.sharedApplication.delegate.window.rootViewController;
+	UIViewController *root = [SKRNNFakeWindow sharedInstance].rootViewController;
 	[root dismissViewControllerAnimated:animated completion:nil];
 	[_delegate dismissedMultipleModals:_presentedModals];
 	[_pendingModalIdsToDismiss removeAllObjects];
@@ -106,7 +107,7 @@
 }
 
 -(UIViewController*)topPresentedVC {
-	UIViewController *root = UIApplication.sharedApplication.delegate.window.rootViewController;
+	UIViewController *root = [SKRNNFakeWindow sharedInstance].rootViewController;
 	while(root.presentedViewController) {
 		root = root.presentedViewController;
 	}

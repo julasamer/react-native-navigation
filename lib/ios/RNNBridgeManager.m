@@ -9,6 +9,7 @@
 #import "RNNRootViewCreator.h"
 #import "RNNReactRootViewCreator.h"
 #import "RNNReactComponentRegistry.h"
+#import "SKRNNHook.h"
 
 @interface RNNBridgeManager() <RCTBridgeDelegate>
 
@@ -100,7 +101,8 @@
 }
 
 - (void)onBridgeWillReload {
-	UIApplication.sharedApplication.delegate.window.rootViewController =  nil;
+	[SKRNNFakeWindow sharedInstance].rootViewController = nil;
+//	UIApplication.sharedApplication.delegate.window.rootViewController =  nil;
 }
 
 @end

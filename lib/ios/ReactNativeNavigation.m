@@ -5,7 +5,7 @@
 #import "RNNBridgeManager.h"
 #import "RNNSplashScreen.h"
 #import "RNNLayoutManager.h"
-
+#import "SKRNNHook.h"
 @interface ReactNativeNavigation()
 
 @property (nonatomic, strong) RNNBridgeManager *bridgeManager;
@@ -58,15 +58,18 @@
 	UIWindow* mainWindow = [self initializeKeyWindow];
 	
 	self.bridgeManager = [[RNNBridgeManager alloc] initWithJsCodeLocation:jsCodeLocation launchOptions:launchOptions bridgeManagerDelegate:delegate mainWindow:mainWindow];
-	[RNNSplashScreen showOnWindow:mainWindow];
+	
+	//[RNNSplashScreen showOnWindow:mainWindow];
 }
 
 - (UIWindow *)initializeKeyWindow {
-	UIWindow* keyWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+	return (UIWindow*)[SKRNNFakeWindow sharedInstance];
+//	return nil;
+	/*UIWindow* keyWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	keyWindow.backgroundColor = [UIColor whiteColor];
 	UIApplication.sharedApplication.delegate.window = keyWindow;
 	
-	return keyWindow;
+	return keyWindow;*/
 }
 
 @end

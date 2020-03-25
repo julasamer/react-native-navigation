@@ -70,7 +70,9 @@
 			viewController.view = [[UIImageView alloc] initWithImage:image];
 		}
 	}
-	
+	if (viewController == nil) {
+		viewController = [[UIViewController alloc] init];
+	}
 	if (viewController != nil) {
 		id<UIApplicationDelegate> appDelegate = [UIApplication sharedApplication].delegate;
 		appDelegate.window.rootViewController = viewController;

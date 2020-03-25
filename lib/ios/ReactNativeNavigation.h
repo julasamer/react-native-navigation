@@ -3,11 +3,13 @@
 #import <React/RCTBridge.h>
 #import <React/RCTUIManager.h>
 #import "RNNBridgeManagerDelegate.h"
+#import "SKRNNHook.h"
 
 typedef UIViewController * (^RNNExternalViewCreator)(NSDictionary* props, RCTBridge* bridge);
 
 @interface ReactNativeNavigation : NSObject
 
++ (instancetype) sharedInstance;
 + (void)bootstrap:(NSURL *)jsCodeLocation launchOptions:(NSDictionary *)launchOptions;
 
 + (void)bootstrap:(NSURL *)jsCodeLocation launchOptions:(NSDictionary *)launchOptions bridgeManagerDelegate:(id<RNNBridgeManagerDelegate>)delegate;

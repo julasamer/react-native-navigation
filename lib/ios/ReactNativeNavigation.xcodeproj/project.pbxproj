@@ -57,6 +57,8 @@
 		26916C991E4B9E7700D13680 /* RNNReactRootViewCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 26916C971E4B9E7700D13680 /* RNNReactRootViewCreator.m */; };
 		2DCD9195200014A900EDC75D /* RNNBridgeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DCD9193200014A900EDC75D /* RNNBridgeManager.h */; };
 		2DCD9196200014A900EDC75D /* RNNBridgeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD9194200014A900EDC75D /* RNNBridgeManager.m */; };
+		30F9EC9A2428FA84008F2578 /* SKRNNHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 30F9EC982428FA84008F2578 /* SKRNNHook.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30F9EC9B2428FA84008F2578 /* SKRNNHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F9EC992428FA84008F2578 /* SKRNNHook.m */; };
 		390AD477200F499D00A8250D /* RNNSwizzles.h in Headers */ = {isa = PBXBuildFile; fileRef = 390AD475200F499D00A8250D /* RNNSwizzles.h */; };
 		390AD478200F499D00A8250D /* RNNSwizzles.m in Sources */ = {isa = PBXBuildFile; fileRef = 390AD476200F499D00A8250D /* RNNSwizzles.m */; };
 		4534E72520CB6724009F8185 /* RNNLargeTitleOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4534E72320CB6724009F8185 /* RNNLargeTitleOptions.h */; };
@@ -399,6 +401,8 @@
 		26916C971E4B9E7700D13680 /* RNNReactRootViewCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNNReactRootViewCreator.m; sourceTree = "<group>"; };
 		2DCD9193200014A900EDC75D /* RNNBridgeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNNBridgeManager.h; sourceTree = "<group>"; };
 		2DCD9194200014A900EDC75D /* RNNBridgeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNNBridgeManager.m; sourceTree = "<group>"; };
+		30F9EC982428FA84008F2578 /* SKRNNHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRNNHook.h; sourceTree = "<group>"; };
+		30F9EC992428FA84008F2578 /* SKRNNHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRNNHook.m; sourceTree = "<group>"; };
 		390AD475200F499D00A8250D /* RNNSwizzles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNNSwizzles.h; sourceTree = "<group>"; };
 		390AD476200F499D00A8250D /* RNNSwizzles.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNNSwizzles.m; sourceTree = "<group>"; };
 		4534E72320CB6724009F8185 /* RNNLargeTitleOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNNLargeTitleOptions.h; sourceTree = "<group>"; };
@@ -1129,6 +1133,8 @@
 			isa = PBXGroup;
 			children = (
 				214545271F4DC7ED006E8DA1 /* Helpers */,
+				30F9EC982428FA84008F2578 /* SKRNNHook.h */,
+				30F9EC992428FA84008F2578 /* SKRNNHook.m */,
 				7BA500731E2544B9001B9E1B /* ReactNativeNavigation.h */,
 				7BA500741E2544B9001B9E1B /* ReactNativeNavigation.m */,
 				2DCD9193200014A900EDC75D /* RNNBridgeManager.h */,
@@ -1266,6 +1272,7 @@
 				505EDD34214E7B7B0071C7DE /* RNNLeafProtocol.h in Headers */,
 				263905B51E4C6F440023D7D3 /* MMExampleDrawerVisualStateManager.h in Headers */,
 				50451D052042DAEB00695F00 /* RNNPushAnimation.h in Headers */,
+				30F9EC9A2428FA84008F2578 /* SKRNNHook.h in Headers */,
 				507F43C51FF4F17C00D9425B /* RNNTopTabsViewController.h in Headers */,
 				501223D72173590F000F5F98 /* RNNNavigationControllerPresenter.h in Headers */,
 				50495946216F5FB5006D2B81 /* TextParser.h in Headers */,
@@ -1612,6 +1619,7 @@
 				E8E518331F83B3E0000467AC /* RNNUtils.m in Sources */,
 				50451D062042DAEB00695F00 /* RNNPushAnimation.m in Sources */,
 				5049593A216E5750006D2B81 /* Bool.m in Sources */,
+				30F9EC9B2428FA84008F2578 /* SKRNNHook.m in Sources */,
 				50F5DFC61F407AA0001A00BC /* RNNNavigationController.m in Sources */,
 				21B85E5D1F44480200B314B5 /* RNNNavigationButtons.m in Sources */,
 				E8E518371F83B94A000467AC /* RNNViewLocation.m in Sources */,

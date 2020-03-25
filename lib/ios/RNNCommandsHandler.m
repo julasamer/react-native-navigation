@@ -10,6 +10,7 @@
 #import "React/RCTI18nUtil.h"
 #import "UIViewController+LayoutProtocol.h"
 #import "RNNLayoutManager.h"
+#import "SKRNNHook.h"
 
 static NSString* const setRoot	= @"setRoot";
 static NSString* const setStackRoot	= @"setStackRoot";
@@ -77,6 +78,7 @@ static NSString* const setDefaultOptions	= @"setDefaultOptions";
 	UIViewController *vc = [_controllerFactory createLayout:layout[@"root"]];
 	
 	[vc renderTreeAndWait:[vc.resolveOptions.animations.setRoot.waitForRender getWithDefaultValue:NO] perform:^{
+		[SKRNNHook sharedInstance].handleControllerBlock(vc);
 		_mainWindow.rootViewController = vc;
 		[_eventEmitter sendOnNavigationCommandCompletion:setRoot commandId:commandId params:@{@"layout": layout}];
 		completion() ;
@@ -104,7 +106,7 @@ static NSString* const setDefaultOptions	= @"setDefaultOptions";
 	RNNNavigationOptions* defaultOptions = [[RNNNavigationOptions alloc] initWithDict:optionsDict];
 	[_controllerFactory setDefaultOptions:defaultOptions];
 	
-	UIViewController *rootViewController = UIApplication.sharedApplication.delegate.window.rootViewController;
+	UIViewController *rootViewController = [SKRNNFakeWindow sharedInstance].rootViewController;
 	[RNNDefaultOptionsHelper recrusivelySetDefaultOptions:defaultOptions onRootViewController:rootViewController];
 	
 	completion();

@@ -2,11 +2,11 @@
 #import "RNNLayoutManager.h"
 #import "RNNLayoutProtocol.h"
 #import "UIViewController+LayoutProtocol.h"
-
+#import "SKRNNHook.h"
 @implementation RNNLayoutManager
 
 + (UIViewController *)findComponentForId:(NSString *)componentId {
-	for (UIWindow* window in UIApplication.sharedApplication.windows) {
+	for (UIWindow* window in @[[SKRNNFakeWindow sharedInstance]]) {
 		UIViewController* result = [self findChildComponentForParent:window.rootViewController ForId:componentId];
 		if (result) {
 			return result;
